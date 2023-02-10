@@ -1,0 +1,65 @@
+@media(min-width: 576px)
+    .wrapper
+        padding-right: 40px
+        height: 300px
+        background: linear-gradient(262.69deg, #339933 -0.43%, #006300 104.36%)
+        display: flex
+        align-items: center
+        gap: 50px
+        &>.picture_block
+            width: 35%
+            height: 90%
+            &>img
+                width: 100%
+                height: 100%
+                object-fit: contain
+        &>.discount_info
+            color: white
+            display: flex
+            flex-direction: column
+            gap: 25px
+            &>.discount_subheader>.p_discount
+                font-size: 40px
+                font-weight: 900
+            &>.discount_subheader>p
+                font-size: 27px
+                font-weight: 900
+
+@media(min-width: 768px)
+    .wrapper
+        height: 350px
+        gap: 90px
+        &>.discount_info
+            gap: 30px
+            &>.discount_subheader>.p_discount
+                font-size: 54px
+            &>.discount_subheader>p
+                font-size: 38px
+
+@media(min-width: 992px)
+    .wrapper
+        height: 400px
+        gap: 120px
+        &>.discount_info
+            &>.discount_subheader>.p_discount
+                font-size: 71px
+            &>.discount_subheader>p
+                font-size: 50px
+
+@media(min-width: 1200px)
+    .wrapper
+        height: 480px
+        gap: 150px
+        &>.discount_info
+            &>.discount_subheader>.p_discount
+                font-size: 87px
+            &>.discount_subheader>p
+                font-size: 60px
+
+@media(min-width: 1440px)
+    .wrapper
+        gap: 200px
+        &>.discount_info
+            gap: 46px
+            &>.discount_subheader>.p_discount
+                font-size: 90px

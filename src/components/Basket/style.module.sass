@@ -1,0 +1,164 @@
+@media(min-width: 576px)
+    .wrapper
+        min-height: calc(100vh - 140px)
+        padding: 60px 30px
+        display: flex
+        flex-direction: column
+        gap: 10px
+        &>.subheader
+            display: flex
+            justify-content: space-between
+            align-items: center
+            gap: 20px
+            &>p
+                font-size: 40px
+                font-weight: 700
+        &>.container
+            display: flex
+            justify-content: space-between
+            align-items: center
+            margin-top: 15px
+            font-size: 15px
+            font-weight: 500
+            &>a
+                text-decoration: none
+                color: #A7A7A7
+                &:hover
+                    color: #339933
+            &>.btn_clear_basket
+                background-color: transparent
+                border: none
+                cursor: pointer
+                color: #A7A7A7
+                &:hover
+                    color: #339933
+        &>.basket_container
+            display: flex
+            flex-direction: column
+            gap: 40px
+            &>.orders
+                border-top: 2px solid #A7A7A7
+                &>.empty_basket_container
+                    padding: 40px 0
+                    text-align: center
+                    &>p
+                        font-size: 30px
+                        font-weight: 700
+            &>.order_detail_container
+                padding: 25px
+                display: flex
+                gap: 20px
+                flex-direction: column
+                justify-content: space-between
+                border: 2px solid #000000
+                border-radius: 21px
+                &>p
+                    font-weight: 600
+                    font-size: 18px
+                &>.price_container
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    font-weight: 500
+                    font-size: 14px
+                    &>.price
+                        font-weight: 600
+                        font-size: 22px
+
+@media(min-width: 768px)
+    .wrapper
+        &>.basket_container
+            gap: 45px
+            &>.orders
+                &>.empty_basket_container
+                    padding: 45px 0
+                    &>p
+                        font-size: 32px
+            &>.order_detail_container
+                margin: 0 auto
+                width: 450px
+                gap: 25px
+
+@media(min-width: 992px)
+    .wrapper
+        min-height: calc(100vh - 170px)
+        &>.container
+            margin-top: 16px
+            font-size: 16px
+            &>.btn_clear_basket
+                font-size: 16px
+        &>.subheader
+            gap: 20px
+            &>p
+                font-size: 30px
+            &>a
+                font-size: 20px
+        &>.container
+            width: 67%
+        &>.basket_container
+            gap: 40px
+            flex-direction: row
+            &>.orders
+                width: 70%
+            &>.order_detail_container
+                height: 300px
+                padding: 25px
+                width: 30%
+                border-radius: 16px
+                &>p
+                    font-size: 20px
+                &>.price_container
+                    font-size: 16px
+                    &>.price
+                        font-size: 24px
+
+@media(min-width: 1200px)
+    .wrapper
+        &>.container
+            margin-top: 18px
+            font-size: 18px
+            &>.btn_clear_basket
+                font-size: 18px
+        &>.subheader
+            gap: 20px
+            &>p
+                font-size: 40px
+            &>a
+                font-size: 20px
+        &>.basket_container
+            gap: 40px
+            &>.order_detail_container
+                height: 360px
+                padding: 23px
+                gap: 48px
+                border-radius: 18px
+                &>p
+                    font-size: 25px
+                &>.price_container
+                    font-size: 21px
+                    &>.price
+                        font-size: 29px
+
+@media(min-width: 1440px)
+    .wrapper
+        padding: 80px 30px
+        &>.container
+            margin-top: 20px
+            font-size: 20px
+            &>.btn_clear_basket
+                font-size: 20px
+        &>.basket_container
+            gap: 60px
+            &>.empty_basket_container
+                width: 100%
+            &>.order_detail_container
+                height: 395px
+                padding: 25px
+                gap: 50px
+                border-radius: 21px
+                &>p
+                    font-size: 28px
+                &>.price_container
+                    font-size: 24px
+                    &>.price
+                        font-size: 32px
