@@ -5,14 +5,14 @@ import Category from '../Category';
 import s from './style.module.sass';
 
 
-export default function AllCategories({type}) {
+export default function AllCategories( {type} ) {
 
     const { categories } = useContext(Context);
 
     return (
-        <div className={[s.categories_container, s[type]].join(' ')}>
+        <div className={ [ s.categories_container ,s[type]].join(' ') } >
             {
-                categories.map(el => <Category key={el.id} {...el} type={type} />)
+                categories.map(el => <Category key={el.id} {...el} type={type}  />)
             }
         </div>
     )

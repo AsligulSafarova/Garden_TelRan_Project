@@ -13,11 +13,6 @@ export default function Description({ product }) {
 		dispatch(add_to_basket_action({ id, title, price, discont_price, image }));
 
 	const block_price =
-		discont_price === 0.75 ? (
-			<>
-				<p className={s.clear_price}>{price}€</p>
-			</>
-		) : (
 			<div className={s.price_block}>
 				<p className={s.discount_price}>{discont_price}€</p>
 				<p className={s.price}>{price}€</p>
@@ -25,7 +20,7 @@ export default function Description({ product }) {
 					-{Math.round(((price - discont_price) * 100) / price)}%
 				</p>
 			</div>
-		);
+	
 	
 	const img_link = `http://localhost:3333/${image}`;
 

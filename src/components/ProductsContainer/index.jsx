@@ -27,7 +27,6 @@ export default function ProductsContainer() {
 			<div className={['wrapper', s.wrapper].join(' ')}>
 				<div className={s.subheader}>
 					<p>{current_category.title}</p>
-					<p className={s.count_product}></p>
 				</div>
 				
 				<div className={s.filtration}>
@@ -35,11 +34,10 @@ export default function ProductsContainer() {
 				</div>
 
 				<div className={s.products_container}>
-					
-					{
-						all_products_in_category.map(product => product.show_flg
-							? <Product key={product.id} {...product} />
-							: '')
+				{
+						all_products_in_category.map(product =>  product.show_flg 
+					 	? <Product key={product.id} {...product} />
+							 : '' )
 					}
 				</div>
 			</div>

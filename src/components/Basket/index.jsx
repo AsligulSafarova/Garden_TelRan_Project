@@ -6,11 +6,12 @@ import BasketItem from './BasketItem';
 import { RightOutlined } from '@ant-design/icons';
 import OrderForm from '../UI/OrderForm';
 import { clear_basket_action } from '../../store/reducer/basketReducer'; 
-/*  import { clear_basket_action } from '../../store/reducer/basketReducer';  */
+
 
 
 
 export default function Basket() {
+ 
 
     const products_basket = useSelector(state => state.basket);
     const dispatch = useDispatch();
@@ -22,17 +23,19 @@ export default function Basket() {
         </div>
     
     const total_price_order = products_basket.reduce((total_price, { price, discont_price, count }) => 
-        discont_price === 0.75
-            ? Math.round(total_price + price * count)
-            : Math.round(total_price + discont_price * count)
-        , 0)
+       discont_price === 0.75
+            ? Math.round(total_price + price * count) 
+           :  Math.round(total_price + discont_price * count)
+   , 0 )
 
     const clear_basket = products_basket.length === 0
         ? ''
         : <button className={s.btn_clear_basket} onClick={() => dispatch(clear_basket_action())}>Очистить корзину</button>
     
     return (
+        
         <div className={['wrapper', s.wrapper].join(' ')}>
+            
             <div className={s.subheader}>
                 <p>Корзина</p>
             </div>
@@ -62,5 +65,6 @@ export default function Basket() {
                 }               
             </div>
         </div>
+      
     )
 }

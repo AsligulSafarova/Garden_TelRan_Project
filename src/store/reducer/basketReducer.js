@@ -70,5 +70,3 @@ export const basketReducer = (state = defaultState, action) => {
         return state
     }
 }
-/* export const increment_count_product_at_the_basket_action = (payload) => ({ type: INCREMENT_COUNT, payload }); */
-/* export const decrement_count_product_at_the_basket_action = (payload) => ({ type: DECREMENT_COUNT, payload }); */

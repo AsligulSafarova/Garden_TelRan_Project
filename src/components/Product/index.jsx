@@ -11,12 +11,7 @@ export default function Product({ id, title, price, discont_price, image}) {
 
     const add_to_basket = () => dispatch(add_to_basket_action({ id, title, image, price, discont_price }));
 
-    const block_price = discont_price === 0.75
-        ?
-            <>
-                <p className = {s.clear_price} > { price }€</p>
-            </>
-        :
+    const block_price = 
             <>
                 <p className={s.discount_price}>{discont_price}€</p>
                 <p className={s.price}>{price}€</p>

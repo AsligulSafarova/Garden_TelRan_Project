@@ -6,19 +6,6 @@ import ButtonToNav from '../UI/ButtonToNav';
 import NavBar from "../NavBar"
 
 export default function Layout() {
-	function check_scroll() {
-		const header = document.getElementById('top');
-		const btn = document.getElementById('btn_scroll');
-		var distanceToTop = header.getBoundingClientRect().top;
-		if (distanceToTop <= -300) {
-			btn.style.display = 'block';
-		} else {
-			btn.style.display = 'none';
-		}
-	}
-
-	window.addEventListener('scroll', check_scroll);
-
 	return (
 		<>
 	

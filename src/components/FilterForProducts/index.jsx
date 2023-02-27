@@ -16,9 +16,11 @@ export default function FilterForProducts() {
 
 
     const [priceParams, setPriceParams] = useState({ minInput: -Infinity, maxInput: Infinity });
+
     const minInput = event => {
         setPriceParams(pre => ({ ...pre, minInput: +event.target.value || -Infinity }));
-    }
+    };
+
     const maxInput = event => {
         setPriceParams(pre => ({ ...pre, maxInput: +event.target.value || Infinity }));
     }
@@ -31,6 +33,7 @@ export default function FilterForProducts() {
 
 
     const [searchProductsParams, setSearchProductsParams] = useState('');
+    
     const check_search_products = event => {
         if (event.target.value !== '') {
             setSearchProductsParams(event.target.value);
@@ -89,6 +92,7 @@ export default function FilterForProducts() {
             dispatch(chech_discount_products_action(payloadForDiscounter));
         }
     }, [priceParams]);
+    
 
     useEffect(() => {
         if ((priceParams.minInput === -Infinity && priceParams.maxInput === Infinity) && !isChecked) {
@@ -137,8 +141,7 @@ export default function FilterForProducts() {
             dispatch(chech_discount_products_action(payloadForDiscounter));
         }
     }, [searchProductsParams]);
-
-    useEffect(() => {
+ useEffect(() => {
         if (priceParams.minInput === -Infinity && priceParams.maxInput === Infinity && searchProductsParams === '') {
             const payloadForDiscounter = {
                 params: isChecked,

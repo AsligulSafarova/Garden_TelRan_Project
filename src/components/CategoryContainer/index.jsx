@@ -2,7 +2,7 @@ import React from 'react';
 import AllCategories from '../AllCategories';
 import s from './style.module.sass'
 
-export default function CatContainer() {
+export default function CategoryContainer() {
 
   return (
     <div className={['wrapper', s.wrapper].join(' ')}>

@@ -9,10 +9,12 @@ import { useEffect } from 'react';
 export default function PromoFilter() {
 	const dispatch = useDispatch();
 
-	const [priceParamsForPromotions, setPriceParamsForPromotions] = useState({ minInput: -Infinity, maxInput: Infinity });
+	const [ priceParamsForPromotions,  setPriceParamsForPromotions] = useState({ minInput: -Infinity, maxInput: Infinity });
+	
 	const maxInput = event => {
 		setPriceParamsForPromotions(pre => ({ ...pre, maxInput: +event.target.value || Infinity }));
-	}
+	};
+	
 	const minInput = event => {
 		setPriceParamsForPromotions(pre => ({ ...pre, minInput: +event.target.value || -Infinity }));
 	}
